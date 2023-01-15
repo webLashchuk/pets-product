@@ -1,0 +1,578 @@
+<section class="category">
+    <div class="container category__container">
+
+        <div class="sidebar">
+            <div class="sidebar__top">
+                <h2 class="title sidebar__title">Filter</h2>
+                <button class="sidebar-btn sidebar-btn--close">
+                    <span class="sr-only">Close menu</span>
+                </button>
+            </div>
+
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <h3 class="sidebar__filter-title">
+                        Gender
+                    </h3>
+                    <form class="pet-filter" action="#">
+                        <ul class="pet-filter__list">
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="male" name="male">
+                                <label class="pet-filter__label" for="male">Male</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="female" name="female">
+                                <label class="pet-filter__label" for="female">Female</label>
+                            </li>
+                        </ul>
+                    </form>
+                </li>
+                <li class="sidebar__item">
+                    <h3 class="sidebar__filter-title">
+                        Color
+                    </h3>
+                    <form class="pet-filter" action="#">
+                        <ul class="pet-filter__list">
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="red" name="red">
+                                <label class="pet-filter__label pet-filter__label--color pet-filter__label--red" for="red">Red</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="apricot" name="apricot">
+                                <label class="pet-filter__label pet-filter__label--color pet-filter__label--apricot" for="apricot">Apricot</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="black" name="black">
+                                <label class="pet-filter__label pet-filter__label--color pet-filter__label--black" for="black">Black</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="black-white" name="black-white">
+                                <label class="pet-filter__label pet-filter__label--color pet-filter__label--black-white" for="black-white">Black & White</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="silver" name="silver">
+                                <label class="pet-filter__label pet-filter__label--color pet-filter__label--silver" for="silver">Silver</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="tan" name="tan">
+                                <label class="pet-filter__label pet-filter__label--color pet-filter__label--tan" for="tan">Tan</label>
+                            </li>
+                        </ul>
+                    </form>
+                </li>
+                <li class="sidebar__item">
+                    <h3 class="sidebar__filter-title">
+                        Price
+                    </h3>
+                    <form class="price-filter" action="#">
+                        <ul class="price-filter__list">
+                            <li class="price-filter__item">
+                                <label class="price-filter__label" for="min">Min</label>
+                                <input class="price-filter__number" type="number" id="min" name="min" value="1" min="1">
+                            </li>
+                            <li class="price-filter__item">
+                                <label class="price-filter__label" for="max">Max</label>
+                                <input class="price-filter__number" type="number" id="max" name="max" value="1" min="1">
+                            </li>
+                        </ul>
+                    </form>
+                </li>
+                <li class="sidebar__item">
+                    <h3 class="sidebar__filter-title">
+                        Breed
+                    </h3>
+                    <form class="pet-filter" action="#">
+                        <ul class="pet-filter__list">
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="small" name="small">
+                                <label class="pet-filter__label" for="small">Small</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="medium" name="medium">
+                                <label class="pet-filter__label" for="medium">Medium</label>
+                            </li>
+                            <li class="pet-filter__item">
+                                <input class="pet-filter__checkbox" type="checkbox" id="large" name="large">
+                                <label class="pet-filter__label" for="large">Large</label>
+                            </li>
+                        </ul>
+                    </form>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="category__inner">
+            <header class="category__top">
+                <h2 class="title category__title">Small Dog</h2>
+                <span class="category__value">
+                    52 puppies
+                </span>
+                <div class="category__top-filters">
+                    <form class="category__form" action="#">
+                        <label class="category__label" for="sort">Sort by:</label>
+                        <select class="category__sort" name="sort" id="sort">
+                            <option value="popular">Popular</option>
+                            <option value="popular">Popular</option>
+                            <option value="popular">Price</option>
+                            <option value="popular">Popular</option>
+                        </select>
+                    </form>
+                    <button class="sidebar-btn sidebar-btn--open">
+                        <span class="sr-only">Open menu</span>
+                    </button>
+                    <h2 class="title filter-title">Filter</h2>
+                </div>
+            </header>
+            <ul class="category__list">
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-yellow.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO502 - Poodle Tiny Yellow</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">3.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-sepia.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO102 - Poodle Tiny Sepia</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">4.000.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/alaskan-grey.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO512 - Alaskan Malamute Grey</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">8.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pembroke-tricolor.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO502 - Pembroke Corgi Tricolor</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">9.000.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pembroke-cream.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pembroke Corgi Cream</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">7.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pomeranian-tricolor.jpg"
+                                width="264" height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pomeranian White</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">6.500.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-cow.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO512 - Poodle Tiny Dairy Cow</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">5.000.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/alaskan-grey.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO512 - Alaskan Malamute Grey</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">8.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pomeranian-white.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pomeranian White</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">6.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-yellow.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO502 - Poodle Tiny Yellow</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">3.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-sepia.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO102 - Poodle Tiny Sepia</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">4.000.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/alaskan-grey.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO512 - Alaskan Malamute Grey</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">8.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pembroke-tricolor.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO502 - Pembroke Corgi Tricolor</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">9.000.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pembroke-cream.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pembroke Corgi Cream</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">7.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pomeranian-tricolor.jpg"
+                                width="264" height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pomeranian White</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">6.500.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item category__item--hidden">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pomeranian-tricolor.jpg"
+                                width="264" height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pomeranian White</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">6.500.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item category__item--hidden">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-cow.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO512 - Poodle Tiny Dairy Cow</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">5.000.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item category__item--hidden">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/alaskan-grey.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO512 - Alaskan Malamute Grey</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">8.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item category__item--hidden">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/pomeranian-white.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO231 - Pomeranian White</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Male</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">6.900.000 VND</span>
+                    </article>
+                </li>
+                <li class="category__item category__item--hidden">
+                    <article class="goods-card">
+                        <a class="goods-card__link" href="#">
+                            <img class="goods-card__img" src="images/goods-card/pets/poodle-yellow.jpg" width="264"
+                                height="264" alt="Pomeranian dog">
+                            <h3 class="goods-card__title">MO502 - Poodle Tiny Yellow</h3>
+                        </a>
+                        <ul class="goods-card__info">
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Gene:</span>
+                                <a class="goods-card__value goods-card__value--link" href="#">Female</a>
+                            </li>
+                            <li class="goods-card__item">
+                                <span class="goods-card__info-title">Age:</span>
+                                <span class="goods-card__value">02 months</span>
+                            </li>
+                        </ul>
+                        <span class="goods-card__price">3.900.000 VND</span>
+                    </article>
+                </li>
+            </ul>
+
+            <div class="pagination">
+                <ul class="pagination__list">
+                    <li class="pagination__item">
+                        <span class="pagination__link pagination__link--prev pagination__link--disabled">
+                            <span class="sr-only">Go prev</span>
+                        </span>
+                    </li>
+                    <li class="pagination__item">
+                        <span class="pagination__link pagination__link--active">
+                            1
+                        </span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">
+                            2
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">
+                            3
+                        </a>
+                    </li>
+                    <li class="pagination__item adaptive-hide">
+                        <a class="pagination__link" href="#">
+                            4
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">
+                            ...
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">
+                            28
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link pagination__link--next" href="#">
+                            <span class="sr-only">Go next</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>

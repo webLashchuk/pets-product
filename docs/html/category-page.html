@@ -1,0 +1,21 @@
+@include('components/main/_head.html', {
+    "pageTitle": "Category"
+})
+
+@include('components/main/_header.html')
+
+<main class="main main--padding">
+
+    <h1 class="sr-only">Pet shop Monito - our dogs</h1>
+
+    @include('components/category/_breadcrumbs.html')
+
+    @include('components/category/_banner-category.html')
+
+    @include('components/category/_category.html')
+
+</main>
+
+@include('components/main/_footer.html')
+
+@include('components/main/_footer-scripts.html')

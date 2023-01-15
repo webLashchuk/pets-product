@@ -1,0 +1,165 @@
+<header class="header">
+    <div class="container">
+        <nav class="header-menu">
+
+            <button class="burger-btn burger-btn--open" type="button">
+                <span class="burger-btn__line"></span>
+                <span class="sr-only">Открыть меню</span>
+            </button>
+
+            <a class="logo header-menu__logo" href="#">
+                <img class="logo__img" src="images/logo.svg" width="115" height="45" alt="Pets shop logo">
+            </a>
+
+            <ul class="main-menu main-menu--header">
+                <li class="main-menu__item">
+                    <a class="link main-menu__link" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="link main-menu__link" href="#">
+                        Category
+                    </a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="link main-menu__link" href="#">
+                        About
+                    </a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="link main-menu__link" href="#">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <form class="header-menu__search-form" action="#">
+                <button class="header-menu__search-submit"></button>
+                <label for="search"></label>
+                <input class="header-menu__search-field" type="text" name="search" id="search"
+                    placeholder="Search something here!">
+            </form>
+
+            <ul class="header-actions">
+                <li class="header-actions__item">
+                    <button class="header-actions__button header-actions__button--selected" type="button">
+                        <span class="sr-only">Selected goods</span>
+                        <span class="header-actions__counter">
+                            16
+                        </span>
+                    </button>
+                </li>
+                <li class="header-actions__item">
+                    <button class="header-actions__button header-actions__button--cart" type="button">
+                        <span class="sr-only">Open cart</span>
+                        <span class="header-actions__counter">
+                            <span class="sr-only">Goods in cart</span>
+                            0
+                        </span>
+                    </button>
+                </li>
+                <li class="header-actions__item">
+                    <div class="select-lang">
+                        <span class="sr-only">Select your language</span>
+                        <div class="select-lang__select" style="background-image:url('images/header/gb.svg')">en</div>
+                        <div class="select-lang__list">
+                            <div class="select-lang__item">
+                                <span class="sr-only">Russian</span>
+                                <a class="select-lang__link select-lang__link--ru"
+                                    style="background-image:url('images/header/ru.svg')" href="#">ru</a>
+                            </div>
+                            <div class="select-lang__item">
+                                <span class="sr-only">Ukrainian</span>
+                                <a class="select-lang__link select-lang__link--ua"
+                                    style="background-image:url('images/header/ua.svg')" href="#">ua</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu">
+            <div class="overlay"></div>
+            <ul class="mobile-menu__inner">
+                <li class="mobile-menu__item">
+                    <a class="logo mobile-menu__logo" href="#">
+                        <img class="logo__img" src="images/logo.svg" width="115" height="40" alt="Monito logo">
+                    </a>
+                    <button class="burger-btn burger-btn--close" type="button">
+                        <span class="sr-only">Закрыть меню</span>
+                    </button>
+                </li>
+                <li class="mobile-menu__item">
+                    <ul class="main-menu main-menu--mobile">
+                        <li class="main-menu__item main-menu__item--mobile">
+                            <a class=" main-menu__link main-menu__link--mobile" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--mobile">
+                            <a class="main-menu__link main-menu__link--mobile" href="#">
+                                Category
+                            </a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--mobile">
+                            <a class="main-menu__link main-menu__link--mobile" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--mobile">
+                            <a class="main-menu__link main-menu__link--mobile" href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu__item">
+                    <ul class="mobile-menu__lang-list">
+                        <li class="select-lang__item">
+                            <span class="sr-only">English</span>
+                            <a class="select-lang__link select-lang__link--en"
+                                style="background-image:url('images/header/gb.svg')">en</a>
+                        </li>
+                        <li class="select-lang__item">
+                            <span class="sr-only">Russian</span>
+                            <a class="select-lang__link select-lang__link--ru"
+                                style="background-image:url('images/header/ru.svg')" href="#">ru</a>
+                        </li>
+                        <li class="select-lang__item">
+                            <span class="sr-only">Ukrainian</span>
+                            <a class="select-lang__link select-lang__link--ua"
+                                style="background-image:url('images/header/ua.svg')" href="#">ua</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu__item">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link social__link--mobile" style="-webkit-mask-image:url(images/sprite.svg#facebook)" href="#">
+                                <span class="sr-only">Go in facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--mobile" style="-webkit-mask-image:url(images/sprite.svg#twitter)" href="#">
+                                <span class="sr-only">Go in twitter</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--mobile" style="-webkit-mask-image:url(images/sprite.svg#instagram)"
+                                href="#">
+                                <span class="sr-only">Go in instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--mobile" style="-webkit-mask-image:url(images/sprite.svg#youtube)" href="#">
+                                <span class="sr-only">Go in outube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

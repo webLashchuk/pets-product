@@ -1,0 +1,218 @@
+.goods {
+    position: relative;
+    padding: 60px 0;
+
+    @include mq('tablet-2') {
+        padding: 40px 0;
+    }
+
+    @include mq('tablet') {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    &__container {
+        @include mq('phone') {
+            position: relative;
+            padding-bottom: 60px;
+        }
+
+        &--accessories {
+            @include mq('phone') {
+                padding-bottom: 70px;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+
+        @include mq('desktop') {
+            grid-gap: 15px;
+        }
+        
+        @include mq('tablet-2') {
+            grid-template-columns: repeat(3, minmax(185px, 280px));
+        }
+
+        @include mq('tablet') {
+            grid-template-columns: repeat(2, minmax(185px, 280px));
+            grid-gap: 10px;
+        }
+
+        @include mq('phone') {
+            grid-template-columns: repeat(2, minmax(140px, 185px));
+        }
+    }
+}
+
+.goods-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    height: 100%;
+    box-shadow: 0px 4px 28px -2px rgba($black, 0.08);
+    border-radius: 12px;
+    padding: 8px 8px 10px;
+    transition: box-shadow .3s;
+
+    &:hover {
+        box-shadow: 0px 4px 28px -2px rgba($primary, 0.3);
+    }
+
+    &__link {
+        height: 100%;
+        margin-bottom: 5px;
+
+        &:focus {
+            outline: transparent;
+        }
+    }
+
+    &__title {
+        transition: color .3s;
+        font-size: 16px;
+        font-weight: 700;
+        color: $neutralBlack;
+
+        &:hover {
+            color: $gray;
+        }
+
+        &:active {
+            color: $darkBlue;
+        }
+
+        @include mq('phone') {
+            font-size: 14px;
+        }
+    }
+
+    &__img {
+        border-radius: 12px;
+        margin-bottom: 15px;
+        object-fit: contain;
+
+        @include mq('desktop') {
+            border-radius: 0px;
+        }
+
+        @include mq('phone') {
+            height: 169px;
+        }
+
+        @include mq('phone-2') {
+            height: 150px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        font-size: 12px;
+        color: $darkGray;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        @include mq('phone') {
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: -13px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3px;
+                height: 3px;
+                background-color: $gray;
+                border-radius: 50%;
+            }
+
+            @include mq('phone') {
+                margin-right: 0;
+                margin-bottom: 5px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__info-title {
+        font-weight: 400;
+    }
+
+    &__value {
+        &--link {
+            transition: color .3s;
+
+            &:focus {
+                outline: transparent;
+            }
+
+            &:hover {
+                color: $primary;
+            }
+
+            &:active {
+                color: $darkBlue;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 14px;
+        font-weight: 700;
+        color: $neutralBlack;
+        margin-bottom: 10px;
+    }
+
+    &__gift {
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        color: $primary;
+        background-color: $accent;
+        border-radius: 8px;
+        padding: 8px 10px 8px 55px;
+
+        &::before,
+        &::after {
+
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 10px;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/goods-card/gift.svg');
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 40px;
+            width: 3px;
+            height: 3px;
+            background-color: $primary;
+            border-radius: 50%;
+        }
+    }
+}

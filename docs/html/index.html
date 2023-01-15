@@ -1,0 +1,29 @@
+@include('components/main/_head.html', {
+    "pageTitle": "Main page"
+})
+
+@include('components/main/_header.html')
+
+<main class="main">
+
+    <h1 class="sr-only">Pet shop Monito - store of goods for animals</h1>
+
+    @include('components/main/_hero.html')
+
+    @include('components/main/_goods-pets.html')
+
+    @include('components/main/_banner-right.html')
+
+    @include('components/main/_goods-accessories.html')
+
+    @include('components/main/_partners.html')
+
+    @include('components/main/_banner-left.html')
+
+    @include('components/main/_blog.html')
+
+</main>
+
+@include('components/main/_footer.html')
+
+@include('components/main/_footer-scripts.html')

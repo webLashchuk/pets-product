@@ -1,0 +1,304 @@
+.product {
+    font-size: 14px;
+
+    &__container {
+        @include mq('phone') {
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        border-radius: 20px;
+        border: 1px solid $neutralGray;
+        padding: 20px;
+
+        @include mq('tablet') {
+            flex-direction: column;
+        }
+
+        @include mq('phone') {
+            border: 1px solid none;
+            padding: 0;
+            border-radius: 0;
+        }
+    }
+
+    &__inner {
+        max-width: 560px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+
+        @include mq('tablet-2') {
+            max-width: 340px;
+        }
+
+        @include mq('tablet') {
+            max-width: 100%;
+        }
+
+        &:last-child {
+            @include mq('phone') {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    &__features {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        border-radius: 10px;
+        background-color: $accent;
+        padding: 15px 10px;
+        margin-bottom: 20px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        @include mq('tablet-2') {
+            flex-wrap: wrap;
+            padding: 15px 10px 5px;
+        }
+    }
+
+    &__features-text {
+        position: relative;
+        display: inline-block;
+        padding-left: 40px;
+        white-space: nowrap;
+
+        @include mq('tablet-2') {
+            margin-bottom: 10px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+        }
+
+        &--health {
+            &::before {
+                background-image: url('../images/product/health-pet.svg');
+            }
+        }
+
+        &--identification {
+            &::before {
+                background-image: url('../images/product/guarantee.svg');
+            }
+        }
+    }
+
+    &__share-container {
+        display: flex;
+        align-items: center;
+
+        @include mq('tablet') {
+            margin-bottom: 10px;
+        }
+
+        @include mq('phone') {
+            padding: 0 10px;
+        }
+    }
+
+    &__share {
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        padding-left: 30px;
+        margin-right: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: $primary;
+            mask-image: url('../images/sprite.svg#share-icon');
+            mask-repeat: no-repeat;
+        }
+    }
+
+    &__number {
+        color: $gray;
+    }
+
+    &__price {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__gen-btn {
+        padding: 10px 28px;
+        margin-right: 20px;
+    }
+
+    &__prop-list {
+        max-width: 510px;
+        width: 100%;
+        color: $darkGray;
+
+        @include mq('tablet') {
+            max-width: 100%;
+        }
+    }
+
+    &__prop-item {
+        display: flex;
+        padding: 10px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $neutralGray;
+        }
+    }
+
+    &__prop-name {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+
+        &::after {
+            content: ":";
+            position: absolute;
+            right: 5px;
+        }
+    }
+}
+
+.product-slider {
+    position: relative;
+    max-width: 560px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    @include mq('phone') {
+        border-radius: 0;
+    }
+
+    &__image img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+
+        @include mq('tablet-2') {
+            max-height: 326px;
+        }
+
+        @include mq('tablet') {
+            max-height: 476px;
+        }
+
+        @include mq('phone') {
+            border-radius: 0;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 42px;
+        background-color: rgba($white, .5);
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        transition: background-color .3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            top: 50%;
+            left: 50%;
+            mask-repeat: no-repeat;
+            transition: background-color .3s;
+        }
+
+        &--next {
+            right: 15px;
+
+            &::before {
+                mask-image: url('../images/sprite.svg#chevron-right');
+                transform: translateY(-40%) translateX(-45%);
+            }
+        }
+
+        &--prev {
+            left: 15px;
+
+            &::before {
+                mask-image: url('../images/sprite.svg#chevron-right');
+                transform: rotate(180deg) translateY(50%) translateX(55%);
+            }
+        }
+
+        &:focus {
+            outline: 2px solid $white;
+        }
+
+        &:hover {
+            background-color: rgba($white, .7);
+
+            &::before {
+                background-color: $gray;
+            }
+        }
+
+        &:active {
+            background-color: rgba($white, .7);
+
+            &::before {
+                background-color: $neutralGray;
+            }
+        }
+    }
+}
+
+.slider-mini {
+    max-width: 560px;
+    margin-bottom: 25px;
+
+    &__image {
+        margin-right: 10px;
+    }
+
+    &__image img {
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+
+        @include mq('tablet-2') {
+            max-height: 64px;
+        }
+
+        @include mq('tablet') {
+            max-height: 94px;
+        }
+
+        @include mq('phone') {
+            max-height: 64px;
+        }
+    }
+}

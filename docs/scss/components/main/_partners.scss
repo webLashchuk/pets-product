@@ -1,0 +1,26 @@
+.partners {
+    padding: 40px 0;
+
+    @include mq('tablet-2') {
+        display: none;
+    }
+    
+    &__header-container {
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    &__sub-title {
+        margin-right: 10px;
+    }
+
+    &__title {
+        margin-right: auto;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

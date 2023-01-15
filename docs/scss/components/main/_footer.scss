@@ -1,0 +1,211 @@
+.footer {
+    padding-top: 80px;
+    background-color: $accent;
+    border-radius: 40px 40px 0 0;
+
+    @include mq('tablet') {
+        padding-top: 40px;
+    }
+
+    &__top {
+        border-bottom: 1px solid $neutralGray;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+
+        @include mq('tablet') {
+            flex-direction: column;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: $darkGray;
+        padding: 40px 0;
+
+        @include mq('tablet') {
+            flex-direction: column;
+            padding: 40px 10px 10px;
+        }
+    }
+
+    &__info-link {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__copyright {
+        @include mq('tablet') {
+            order: 3;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__logo {
+        @include mq('tablet') {
+            order: 1;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__info {
+        @include mq('tablet') {
+            order: 2;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.subscription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary;
+    border-radius: 16px;
+    padding: 32px;
+
+    @include mq('tablet-2') {
+        flex-wrap: wrap;
+    }
+
+    @include mq('tablet') {
+        padding: 20px;
+    }
+
+    &__title {
+        max-width: 370px;
+        color: $white;
+
+        @include mq('tablet-2') {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form {
+        max-width: 700px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $white;
+        border-radius: 14px;
+        line-height: 1.4;
+        padding: 12px;
+
+        @include mq('phone') {
+            flex-direction: column;
+        }
+    }
+
+    &__field {
+        width: 100%;
+        border: 1px solid $gray;
+        border-radius: 8px;
+        padding: 14px 28px;
+        margin-right: 10px;
+        transition: box-shadow .3s;
+
+        @include mq('phone') {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        &::placeholder {
+            color: $gray;
+            font-size: 14px;
+            transition: color .3s;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $primary;
+        }
+
+        &:hover {
+            &::placeholder {
+                color: $primary;
+            }
+        }
+
+        &:active {
+            &::placeholder {
+                color: $darkBlue;
+            }
+        }
+    }
+    
+    &__gen-btn {
+        border-radius: 8px;
+        padding: 14px 30px;
+
+        @include mq('phone') {
+            width: 100%;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        &--product {
+            width: 18px;
+            height: 18px;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-color: $primary;
+        transition: opacity .3s, background-color .3s;
+        
+        &--product {
+            width: 18px;
+            height: 18px;
+            background-color: $gray;
+        }
+
+        &:focus {
+            outline: 2px solid $primary;
+        }
+
+        &:hover {
+            background-color: $gray;
+
+        }
+        
+        &--product {
+            &:hover {
+                background-color: $primary;
+    
+            }
+        }
+
+        &:active {
+            background-color: $darkBlue;
+        }
+    }
+}

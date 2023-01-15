@@ -1,0 +1,94 @@
+.pagination {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 12px;
+
+        @include mq('tablet') {
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 8px;
+        transition: color .3s, background-color .3s;
+
+        @include mq('phone-2') {
+            width: 32px;
+            height: 32px;
+        }
+
+        &--active {
+            background-color: $primary;
+            color: $white;
+        }
+
+        &:not(.pagination__link--active, .pagination__link--disabled) {
+            cursor: pointer;
+            transition: color .3s, background-color .3s;
+
+            &:hover {
+                color: $gray;
+
+                &::before {
+                    background-color: $gray;
+                }
+            }
+
+            &:active {
+                color: $darkGray;
+
+                &::before {
+                    background-color: $darkGray;
+                }
+            }
+        }
+
+        &--prev,
+        &--next {
+            &::before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: $primary;
+                mask-repeat: no-repeat;
+                width: 15px;
+                height: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: background-color .3s;
+            }
+        }
+
+        &--prev {
+            &::before {
+                mask-image: url('../images/sprite.svg#arrow-left');
+            }
+        }
+
+        &--next {
+            &::before {
+                mask-image: url('../images/sprite.svg#arrow-left');
+                transform: translateY(-60%) rotate(180deg);
+            }
+        }
+
+        &--disabled {
+            &::before {
+                background-color: $gray;
+            }
+        }
+    }
+
+}

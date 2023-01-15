@@ -1,0 +1,105 @@
+.hero {
+    background-image: url('../images/hero/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    border-radius: 0 0 40px 40px;
+
+    &__container {
+        @include mq('tablet-2') {
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        background-position: right bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 80px 0 205px;
+
+        @include mq('tablet-2') {
+            box-shadow: inset 0 0 0 1500px rgba($accent, 0.5);
+            border-radius: 0 0 40px 40px;
+            padding: 50px 10px 100px 10px;
+        }
+
+        @include mq('tablet-2') {
+            padding: 50px 10px 100px 10px;
+        }
+        
+        @include mq('tablet') {
+            padding: 0 10px 50px 10px;
+        }
+
+        @include r(420) {
+            padding: 0 10px 50px 10px;
+        }
+    }
+
+    &__gen-btn {
+        padding: 15px 45px;
+
+        @include mq('phone') {
+            padding: 15px 35px;
+        }
+
+        @include mq('phone-2') {
+            padding: 15px 25px;
+        }
+    }
+
+    &__inner {
+        max-width: 480px;
+    }
+
+    &__caption-big {
+        font-size: 60px;
+
+        @include mq('tablet-2') {
+            font-size: 54px;
+        }
+
+        @include mq('tablet') {
+            font-size: 44px;
+        }
+
+        @include mq('phone') {
+            font-size: 36px;
+        }
+
+        @include r(420) {
+            font-size: 44px;
+        }
+    }
+
+    &__caption-small {
+        font-size: 46px;
+        margin-bottom: 25px;
+
+        @include mq('tablet-2') {
+            font-size: 42px;
+        }
+
+        @include mq('tablet') {
+            font-size: 34px;
+        }
+
+        @include mq('phone') {
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        @include r(420) {
+            font-size: 34px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+
+        @include mq('phone') {
+            font-size: 14px;
+        }
+    }
+}

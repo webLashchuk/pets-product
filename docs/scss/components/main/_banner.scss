@@ -1,0 +1,183 @@
+.banner {
+    max-width: 1180px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0 auto;
+
+    @include mq('desktop') {
+        padding: 0 10px;
+    }
+
+    @include mq('tablet') {
+        max-width: 450px;
+    }
+
+    &--left {
+        background-position: left top;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 60px 85px;
+
+        @include mq('tablet-2') {
+            padding: 30px 65px;
+        }
+
+        @include mq('tablet') {
+            padding: 30px 20px 300px;
+            background-position: bottom center;
+            justify-content: center;
+            background-size: contain;
+        }
+
+        @include r(420) {
+            padding: 20px 65px 30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../images/banners/main/banner-right-bg.jpg');
+            width: 100%;
+            top: 0;
+            left:0;
+            height: 100%;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            z-index: -1;
+            background-position: right top;
+            overflow: hidden;
+
+            @include mq('tablet') {
+                background-image: url('../images/banners/main/banner-right-sm.jpg');
+                background-size: cover;
+            }
+        }
+
+        &--left {
+            background-position: right;
+            justify-content: flex-start;
+
+            &::before {
+                background-image: url('../images/banners/main/banner-left-bg.jpg');
+            }
+
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+
+        &--category {
+            background-size: 640px;
+            color: $white;
+            background-position: 30px bottom;
+
+            @include mq('desktop') {
+                background-size: 540px;
+                background-position: left bottom;
+            }
+
+            @include mq('tablet-2') {
+                background-size: 340px;
+            }
+
+            @include mq('tablet') {
+                color: $primary;
+                background-size: contain;
+                padding: 30px 20px 200px;
+            }
+
+            &::before {
+                background-image: url('../images/banners/category/banner-category-bg.jpg');
+    
+                @include mq('tablet') {
+                    background-image: url('../images/banners/category/banner-category-sm.jpg');
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    &__inner {
+        text-align: right;
+
+        @include mq('tablet') {
+            text-align: center;
+        }
+
+        &--left {
+            text-align: left;
+        }
+    }
+
+    &__caption-big {
+        font-size: 52px;
+
+        @include mq('tablet-2') {
+            font-size: 46px;
+        }
+
+        @include mq('tablet') {
+            font-size: 36px;
+        }
+
+        @include r(420) {
+            font-size: 36px;
+        }
+
+        &--icon {
+            max-width: fit-content;
+            position: relative;
+            padding-right: 58px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 42px;
+                height: 38px;
+                background-image: url('../images/banners/main/paw.svg');
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+        }
+    }
+
+    &__caption-small {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        @include mq('tablet-2') {
+            font-size: 32px;
+        }
+
+        @include mq('tablet') {
+            font-size: 24px;
+        }
+
+        @include r(420) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        max-width: 395px;
+        margin-bottom: 40px;
+
+        @include mq('tablet') {
+            max-width: 345px;
+        }
+    }
+
+    &__gen-btn {
+        padding: 14px 35px;
+    }
+}

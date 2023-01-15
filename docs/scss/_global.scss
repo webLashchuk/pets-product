@@ -1,0 +1,427 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: $primary;
+    background-color: $grayBg;
+    display: flex;
+    flex-direction: column;
+}
+
+body.lock {
+    @include mq('desktop') {
+        overflow: hidden;
+    }
+
+    &--filter {
+        overflow: auto;
+
+        @include mq('tablet') {
+            overflow: hidden;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    background-color: $black;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 1s;
+
+    &--active {
+        opacity: 0.5;
+    }
+
+    &--filter {
+        display: none;
+
+        @include mq('tablet') {
+            display: block;
+            opacity: 0.5;
+        }
+    }
+}
+
+.main {
+    flex-grow: 1;
+
+    &--padding {
+        padding-top: 100px;
+
+        @include mq('tablet') {
+            padding-top: 70px;
+        }
+
+        @include r(420) {
+            padding-top: 80px;
+        }
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.caption-big {
+    display: block;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.caption-small {
+    display: block;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.link {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color .5s, color .3s;
+
+    &:focus {
+        outline: transparent;
+        border-color: $primary;
+    }
+
+    &:hover {
+        color: $gray;
+    }
+
+    &:active {
+        color: $darkBlue;
+    }
+}
+
+.view-link {
+    position: relative;
+    outline: 2px solid $primary;
+    border-radius: 57px;
+    white-space: nowrap;
+    padding: 14px 60px 14px 28px;
+    margin-right: 20px;
+    z-index: 0;
+    transition: background-color .3s, color .3s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 31px;
+        background-color: $primary;
+        mask-repeat: no-repeat;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        mask-image: url('../images/sprite.svg#play-circle');
+        transition: background-color .3s, color .3s, transform .3s;
+
+        @include mq('phone') {
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+    }
+
+    &:focus {
+        outline: 2px solid $primary;
+    }
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+
+        &::before {
+            background-color: $white;
+        }
+    }
+
+    &--white {
+        outline: 2px solid $white;
+
+        &::before {
+            background-color: $white;
+        }
+
+        @include mq('tablet') {
+            outline: 2px solid $primary;
+
+            &::before {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &--intro {
+        @include mq('phone') {
+            font-size: 0;
+            background-color: $primary;
+            max-width: 49px;
+            vertical-align: middle;
+            padding: 24px;
+            border-radius: 50px;
+
+            &::before {
+                top: 50%;
+                left: 50%;
+                width: 28px;
+                height: 28px;
+                background-color: $white;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+    }
+
+    &--more {
+        padding: 10px 60px 10px 28px;
+        margin-right: 0;
+
+        &::before {
+            width: 12px;
+            height: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            mask-image: url('../images/sprite.svg#chevron-right');
+        }
+
+        @include mq('phone') {
+            position: absolute;
+            max-width: 380px;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px;
+
+            &::before {
+                left: 65%;
+                top: 50%;
+            }
+        }
+
+        @include mq('phone-2') {
+            &::before {
+                left: 70%;
+            }
+        }
+    }
+
+
+    &:active {
+        &::before {
+            background-color: $white;
+            transform: translateX(15px) translateY(-50%);
+        }
+
+        background-color: $darkBlue;
+    }
+
+    &--chat {
+        cursor: pointer;
+        padding: 6px 28px 6px 60px;
+        margin-bottom: 20px;
+
+        &::before {
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            mask-image: url('../images/sprite.svg#chat-icon');
+            background-color: $primary;
+        }
+
+        &:active {
+            &::before {
+                background-color: $white;
+                transform: translateX(0) translateY(-50%);
+            }
+
+            background-color: $darkBlue;
+        }
+    }
+}
+
+.gen-btn {
+    color: $white;
+    background-color: $primary;
+    border-radius: 57px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+
+    &:focus {
+        outline: 2px solid $primary
+    }
+
+    &:hover {
+        color: $primary;
+        background-color: transparent;
+        outline: 2px solid $primary;
+    }
+
+    &:active {
+        color: $white;
+        background-color: $darkBlue;
+    }
+
+    &--white {
+        background-color: $white;
+        color: $primary;
+
+        &:hover {
+            color: $white;
+            background-color: transparent;
+            outline: 2px solid $white;
+        }
+
+        @include mq('tablet') {
+            color: $white;
+            background-color: $primary;
+
+            &::before {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary;
+
+    @include mq('tablet') {
+        font-size: 20px;
+    }
+}
+
+.sub-title {
+    color: $black;
+
+    @include mq('tablet') {
+        font-size: 14px;
+    }
+}
+
+.logo {
+    border-radius: 8px;
+    transition: box-shadow .3s, opacity .3s;
+
+    &:focus {
+        box-shadow: 0 0 0 2px $primary;
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    font-weight: 700;
+
+    @include mq('tablet') {
+        margin: 0 auto;
+    }
+
+    &--header {
+        @include mq('tablet-2') {
+            display: none;
+        }
+    }
+
+    &--mobile {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 48px;
+
+            @include mq('desktop') {
+                margin-right: 30px;
+            }
+
+            @include mq('phone-2') {
+                margin-right: 20px;
+            }
+        }
+
+        &--mobile {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &--footer {
+            font-size: 16px;
+            font-weight: 400;
+            margin-right: 60px;
+
+            @include mq('tablet-2') {
+                display: block;
+            }
+
+            @include mq('tablet') {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__link {
+        &--mobile {
+            display: block;
+            padding: 10px 0;
+        }
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include mq('tablet') {
+        margin: 0 auto 20px;
+    }
+}
+
+.adaptive-hide {
+    @include mq('tablet') {
+        display: none;
+    }
+}

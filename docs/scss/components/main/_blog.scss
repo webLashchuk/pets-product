@@ -1,0 +1,92 @@
+.blog {
+    padding: 60px 0;
+
+    @include mq('tablet-2') {
+        padding: 40px 0;
+    }
+
+    @include mq('tablet') {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    @include mq('phone') {
+        padding: 20px 0 40px;
+    }
+
+    &__container {
+        @include mq('phone') {
+            position: relative;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 380px);
+        overflow: auto;
+        grid-gap: 10px;
+        padding-bottom: 20px;
+
+        @include mq('tablet') {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.blog-article {
+    max-width: 380px;
+    height: 100%;
+    padding: 8px;
+    box-shadow: 0px 4px 28px -2px rgba($black, 0.08);
+    border-radius: 12px;
+    transition: box-shadow .3s;
+
+    @include mq('tablet') {
+        margin: 0 auto;
+    }
+
+    &:hover {
+        box-shadow: 0px 4px 28px -2px rgba($primary, 0.3);
+    }
+    
+    &__link {
+        align-items: flex-start;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &:focus {
+            outline: transparent;
+        }
+    }
+
+    &__img {
+        margin-bottom: 15px;
+        object-fit: contain;
+    }
+    
+    &__category {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        color: $white;
+        background-color: $seaBlue;
+        border-radius: 28px;
+        padding: 2px 10px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        flex-grow: 1;
+        font-size: 16px;
+        font-weight: 700;
+        color: $neutralBlack;
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        font-weight: 400;
+        @include line-clamp(3);
+    }
+}

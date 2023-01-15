@@ -1,0 +1,77 @@
+$neutralGray: #fdfdfd;
+$primary: #003459;
+$darkBlue: #00528c;
+$gray: #99a2A5;
+$neutralGray: #ccd1d2;
+$darkGray: #667479;
+$white: #ffffff;
+$accent: #fceed5;
+$grayBg: #fdfdfd;
+$black: #000000;
+$neutralBlack: #00171f;
+$seaBlue: #00a7e7;
+$checkbox: #ccd1d2;
+$red: #ff564f;
+$apricot: #ffb672;
+$silver: #cecece;
+$tan: #fff7ce;
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+$breakpoints: (
+  "phone-2": 375px,
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px
+);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type ==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x ) * 100 + '%');
+
+  @if $pseudo {
+    &::before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  }
+
+  @else {
+    padding-top: $padding;
+  }
+}
+
+@mixin r($height) {
+  @media (max-height: #{$height}px) {
+    @content;
+   }
+}
